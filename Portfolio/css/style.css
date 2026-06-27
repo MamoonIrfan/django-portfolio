@@ -1,0 +1,929 @@
+/* ==========================
+   Google Font
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   CSS Variables
+========================== */
+
+:root{
+
+    --primary:#0f172a;
+    --secondary:#2563eb;
+    --white:#ffffff;
+    --light:#f8fafc;
+    --gray:#64748b;
+    --shadow:0 8px 25px rgba(0,0,0,.12);
+
+}
+
+/* ==========================
+   Reset
+========================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+/* ==========================
+   Body
+========================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+    color:#222;
+    line-height:1.7;
+
+}
+
+/* ==========================
+   Images
+========================== */
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+/* ==========================
+   Links
+========================== */
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ==========================
+   Lists
+========================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ==========================
+   Header
+========================== */
+
+header{
+
+    background:var(--primary);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 80px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+/* ==========================
+   Logo
+========================== */
+
+.logo h2{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+/* ==========================
+   Navigation
+========================== */
+
+nav ul{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    font-size:17px;
+
+    transition:.3s;
+
+    padding:8px 15px;
+
+    border-radius:5px;
+
+}
+
+nav ul li a:hover{
+
+    background:var(--secondary);
+
+}
+
+.active{
+
+    background:var(--secondary);
+
+}
+
+/* ==========================
+   Hero Section
+========================== */
+
+.hero{
+
+    width:90%;
+
+    margin:70px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+}
+
+/* ==========================
+   Hero Text
+========================== */
+
+.hero-text{
+
+    flex:1;
+
+}
+
+.hero-text h1{
+
+    font-size:52px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.hero-text h3{
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+}
+
+.hero-text p{
+
+    color:var(--gray);
+
+    margin-bottom:30px;
+
+    text-align:justify;
+
+}
+
+/* ==========================
+   Hero Image
+========================== */
+
+.hero-image{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.hero-image img{
+
+    width:360px;
+
+    height:360px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================
+   Button
+========================== */
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--secondary);
+
+    color:white;
+
+    padding:14px 35px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    background:var(--primary);
+
+}
+
+/* ==========================
+   Common Page Section
+========================== */
+
+.page{
+
+    width:90%;
+
+    margin:60px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.page h1{
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+    font-size:40px;
+
+}
+
+.page h2{
+
+    color:var(--secondary);
+
+    margin-top:25px;
+
+    margin-bottom:15px;
+
+}
+
+.page p{
+
+    margin-bottom:15px;
+
+    color:#444;
+
+    text-align:justify;
+
+}
+
+.page ul{
+
+    list-style:disc;
+
+    margin-left:25px;
+
+}
+
+.page li{
+
+    margin-bottom:10px;
+
+}/* ==========================
+   Education Table
+========================== */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+
+}
+
+table th{
+
+    background:var(--secondary);
+    color:white;
+    padding:15px;
+    text-align:left;
+
+}
+
+table td{
+
+    padding:15px;
+    border-bottom:1px solid #ddd;
+
+}
+
+table tr:nth-child(even){
+
+    background:#f8fafc;
+
+}
+
+table tr:hover{
+
+    background:#e2e8f0;
+
+}
+
+/* ==========================
+   Skills
+========================== */
+
+.page ul li{
+
+    background:#f8fafc;
+    padding:12px 18px;
+    margin-bottom:12px;
+    border-left:5px solid var(--secondary);
+    border-radius:6px;
+    transition:.3s;
+
+}
+
+.page ul li:hover{
+
+    background:var(--secondary);
+    color:white;
+    transform:translateX(8px);
+
+}
+
+/* ==========================
+   Projects
+========================== */
+
+article{
+
+    background:#ffffff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:var(--shadow);
+    margin-bottom:30px;
+    transition:.3s;
+
+}
+
+article:hover{
+
+    transform:translateY(-8px);
+
+}
+
+article h2{
+
+    color:var(--primary);
+
+}
+
+hr{
+
+    margin:30px 0;
+    border:none;
+    height:1px;
+    background:#ddd;
+
+}
+
+/* ==========================
+   Contact Form
+========================== */
+
+form{
+
+    margin-top:25px;
+
+}
+
+label{
+
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-weight:600;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:var(--secondary);
+
+}
+
+button{
+
+    margin-top:25px;
+    background:var(--secondary);
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:var(--primary);
+
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+
+    background:var(--primary);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+
+}
+
+/* ==========================
+   Responsive Design
+========================== */
+
+@media(max-width:992px){
+
+header{
+
+    flex-direction:column;
+    padding:20px;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+    gap:15px;
+
+}
+
+.hero{
+
+    flex-direction:column-reverse;
+    text-align:center;
+
+}
+
+.hero-text h1{
+
+    font-size:40px;
+
+}
+
+.hero-text h3{
+
+    font-size:24px;
+
+}
+
+.hero-text p{
+
+    text-align:center;
+
+}
+
+.hero-image img{
+
+    width:280px;
+    height:280px;
+
+}
+
+.page{
+
+    padding:25px;
+
+}
+
+table{
+
+    display:block;
+    overflow-x:auto;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.logo h2{
+
+    font-size:22px;
+
+}
+
+nav ul{
+
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.hero{
+
+    margin:40px auto;
+
+}
+
+.hero-text h1{
+
+    font-size:32px;
+
+}
+
+.hero-text h3{
+
+    font-size:20px;
+
+}
+
+.btn{
+
+    width:100%;
+    text-align:center;
+
+}
+
+button{
+
+    width:100%;
+
+}
+
+.page h1{
+
+    font-size:30px;
+
+}
+
+}
+/* ==========================
+   Project Images
+========================== */
+
+article img{
+
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:20px;
+
+}
+
+/* ==========================
+   Project / Experience Cards
+========================== */
+
+article{
+
+    background:#ffffff;
+    padding:25px;
+    margin-bottom:30px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+    transition:0.3s ease;
+
+}
+
+article:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+article h3{
+
+    color:#0f172a;
+
+    margin-bottom:15px;
+
+}
+
+article h4{
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+
+}
+
+article p{
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================
+   Multiple Buttons
+========================== */
+
+/* .btn{
+
+    display:inline-block;
+
+    margin-right:12px;
+
+    margin-top:10px;
+
+} */
+
+/* ==========================
+   Buttons Hover
+========================== */
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================
+   Achievement Cards
+========================== */
+
+.page article{
+
+    border-left:5px solid #2563eb;
+
+}
+
+/* ==========================
+   Contact Information
+========================== */
+
+.page a:not(.btn){
+
+    color:#2563eb;
+
+    font-weight:600;
+
+}
+
+.page a:not(.btn):hover{
+
+    color:#0f172a;
+
+}
+
+/* ==========================
+   Better Horizontal Line
+========================== */
+
+hr{
+
+    margin:45px 0;
+
+    border:none;
+
+    border-top:1px solid #ddd;
+
+}
+
+/* ==========================
+   Responsive Images
+========================== */
+
+@media(max-width:768px){
+
+article img{
+
+       width:100%;
+
+    height:320px;
+
+    object-fit:contain;
+
+    background:#f5f5f5;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+}
+
+.btn{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    text-align:center;
+
+}
+
+}
+
+/* ==========================
+   Hero Buttons
+========================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+/* ==========================
+   Statistics Section
+========================== */
+
+.stats{
+
+    width:90%;
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card h2{
+
+    color:var(--secondary);
+
+    font-size:40px;
+
+}
+
+.stat-card p{
+
+    margin-top:10px;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.footer-content{
+
+    width:90%;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.footer-content h2{
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+.footer-content p{
+
+    color:#ddd;
+
+    margin-bottom:10px;
+
+}
+
+.footer-content a{
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+.footer-content a:hover{
+
+    color:#60a5fa;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+.stats{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.stats{
+
+    grid-template-columns:1fr;
+
+}
+
+}
