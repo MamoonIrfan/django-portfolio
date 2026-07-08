@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Muhammad Mamoon Irfan</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<!-- Header Start -->
+
+<header>
+
+    <div class="logo">
+        <h2>Mamoon Portfolio</h2>
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'education' %}">Education</a></li>
+            <li><a href="{% url 'skills' %}">Skills</a></li>
+            <li><a href="{% url 'experience' %}">Experience</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'achievements' %}">Achievements</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- Header End -->
+
+
+<!-- Main Start -->
+
+<main>
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>{{ bio.name }}</h1>
+
+            <h3>{{ bio.job_title }}</h3>
+
+            <p>
+                {{ bio.description }}
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="{{ bio.resume.url }}" class="btn" download>
+                    Download Resume
+                </a>
+
+                <a href="{% url 'projects' %}" class="btn">
+                    View Projects
+                </a>
+
+                <a href="{% url 'contact' %}" class="btn">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img src="{{ bio.profile_picture.url }}" alt="{{ bio.name }}">
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Main End -->
+
+<section class="stats">
+
+    <div class="stat-card">
+
+        <h2>9+</h2>
+
+        <p>Projects</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>3+</h2>
+
+        <p>Years Experience</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>3</h2>
+
+        <p>Awards</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>3.75</h2>
+
+        <p>CGPA</p>
+
+    </div>
+
+</section>
+
+<!-- Footer Start -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>{{ bio.name }}</h2>
+
+        <p>
+
+            {{ bio.job_title }}
+
+        </p>
+
+        <p>
+
+            Email:
+            <a href="mailto:{{ bio.email }}">
+
+                {{ bio.email }}
+
+            </a>
+
+        </p>
+
+        <p>
+
+            <a href="{{ bio.github }}"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                GitHub
+
+            </a>
+
+            |
+
+            <a href="{{ bio.linkedin }}"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                LinkedIn
+
+            </a>
+
+        </p>
+
+        <hr>
+
+        <p>
+
+            &copy; 2026 {{ bio.name }}.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- Footer End -->
+
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Muhammad Mamoon Irfan</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h2>Mamoon Portfolio</h2>
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'education' %}">Education</a></li>
+            <li><a href="{% url 'skills' %}">Skills</a></li>
+            <li><a href="{% url 'experience' %}">Experience</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'achievements' %}">Achievements</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="page">
+
+<h1>My Projects</h1>
+
+
+<h2>🎓 Academic Projects</h2>
+
+{% for project in academic_projects %}
+
+<article>
+
+{% if project.image %}
+<img src="{{ project.image.url }}" alt="{{ project.title }}">
+{% endif %}
+
+<h3>{{ project.title }}</h3>
+
+<p>
+{{ project.description }}
+</p>
+
+{% if project.technologies %}
+<p>
+<strong>Technologies:</strong> {{ project.technologies }}
+</p>
+{% endif %}
+
+{% if project.github_link %}
+<a href="{{ project.github_link }}" class="btn" target="_blank">
+GitHub
+</a>
+{% endif %}
+
+{% if project.demo_link %}
+<a href="{{ project.demo_link }}" class="btn" target="_blank">
+Demo
+</a>
+{% endif %}
+
+</article>
+
+{% endfor %}
+
+<hr>
+
+
+<h2>💼 Professional Projects</h2>
+
+{% for project in professional_projects %}
+
+<article>
+
+{% if project.image %}
+<img src="{{ project.image.url }}" alt="{{ project.title }}">
+{% endif %}
+
+<h3>{{ project.title }}</h3>
+
+<p>
+{{ project.description }}
+</p>
+
+{% if project.technologies %}
+<p>
+<strong>Technologies:</strong> {{ project.technologies }}
+</p>
+{% endif %}
+
+{% if project.github_link %}
+<a href="{{ project.github_link }}" class="btn" target="_blank">
+GitHub
+</a>
+{% endif %}
+
+{% if project.demo_link %}
+<a href="{{ project.demo_link }}" class="btn" target="_blank">
+Demo
+</a>
+{% endif %}
+
+</article>
+
+{% endfor %}
+
+<hr>
+
+
+<h2>💻 Personal Projects</h2>
+
+{% for project in personal_projects %}
+
+<article>
+
+{% if project.image %}
+<img src="{{ project.image.url }}" alt="{{ project.title }}">
+{% endif %}
+
+<h3>{{ project.title }}</h3>
+
+<p>
+{{ project.description }}
+</p>
+
+{% if project.technologies %}
+<p>
+<strong>Technologies:</strong> {{ project.technologies }}
+</p>
+{% endif %}
+
+{% if project.github_link %}
+<a href="{{ project.github_link }}" class="btn" target="_blank">
+GitHub
+</a>
+{% endif %}
+
+{% if project.demo_link %}
+<a href="{{ project.demo_link }}" class="btn" target="_blank">
+Demo
+</a>
+{% endif %}
+
+</article>
+
+{% endfor %}
+
+</section>
+
+</main>
+
+
+<!-- Footer Start -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>{{ bio.name }}</h2>
+
+        <p>
+
+            {{ bio.job_title }}
+
+        </p>
+
+        <p>
+
+            Email:
+            <a href="mailto:{{ bio.email }}">
+
+                {{ bio.email }}
+
+            </a>
+
+        </p>
+
+        <p>
+
+            <a href="{{ bio.github }}"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                GitHub
+
+            </a>
+
+            |
+
+            <a href="{{ bio.linkedin }}"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                LinkedIn
+
+            </a>
+
+        </p>
+
+        <hr>
+
+        <p>
+
+            &copy; 2026 {{ bio.name }}.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- Footer End -->
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>

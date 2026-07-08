@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Muhammad Mamoon Irfan</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h2>Mamoon Portfolio</h2>
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'education' %}">Education</a></li>
+            <li><a href="{% url 'skills' %}">Skills</a></li>
+            <li><a href="{% url 'experience' %}">Experience</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'achievements' %}">Achievements</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="page">
+
+<h1>Contact Me</h1>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<label for="name">Full Name</label>
+
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Enter your full name"
+required
+>
+
+<label for="email">Email Address</label>
+
+<input
+type="email"
+id="email"
+name="email"
+placeholder="Enter your email"
+required
+>
+
+<label for="subject">Subject</label>
+
+<input
+type="text"
+id="subject"
+name="subject"
+placeholder="Enter subject"
+required
+>
+
+<label for="message">Message</label>
+
+<textarea
+id="message"
+name="message"
+rows="6"
+placeholder="Write your message here..."
+required
+></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<hr>
+
+<h2>Contact Information</h2>
+
+<p>
+
+<strong>Personal Email:</strong>
+
+<a href="mailto:{{ bio.email }}">
+
+{{ bio.email }}
+
+</a>
+
+</p>
+
+<p>
+
+<strong>University Email:</strong>
+
+<a href="mailto:{{ bio.university_email }}">
+
+{{ bio.university_email }}
+
+</a>
+
+</p>
+
+<p>
+
+<strong>LinkedIn:</strong>
+
+<a href="{{ bio.linkedin }}" target="_blank">
+
+Visit My LinkedIn Profile
+
+</a>
+
+</p>
+
+<p>
+
+<strong>GitHub:</strong>
+
+<a href="{{ bio.github }}" target="_blank">
+
+Visit My GitHub Profile
+
+</a>
+
+</p>
+
+</section>
+
+</main>
+
+
+<!-- Footer Start -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>{{ bio.name }}</h2>
+
+        <p>
+
+            {{ bio.job_title }}
+
+        </p>
+
+        <p>
+
+            Email:
+            <a href="mailto:{{ bio.email }}">
+
+                {{ bio.email }}
+
+            </a>
+
+        </p>
+
+        <p>
+
+            <a href="{{ bio.github }}"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                GitHub
+
+            </a>
+
+            |
+
+            <a href="{{ bio.linkedin }}"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                LinkedIn
+
+            </a>
+
+        </p>
+
+        <hr>
+
+        <p>
+
+            &copy; 2026 {{ bio.name }}.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- Footer End -->
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>
